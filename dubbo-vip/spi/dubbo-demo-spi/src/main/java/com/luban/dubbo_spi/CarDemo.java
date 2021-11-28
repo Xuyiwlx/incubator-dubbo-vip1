@@ -19,25 +19,21 @@ import java.util.Map;
 public class CarDemo {
 
     public static void main(String[] args) {
-        ExtensionLoader<Car> extensionLoader =
-                ExtensionLoader.getExtensionLoader(Car.class);
+        ExtensionLoader<Car> extensionLoader =  ExtensionLoader.getExtensionLoader(Car.class);
 
+        /*Car redCar = extensionLoader.getExtension("red");
+        redCar.getColor();*/
 
-        Car redCar = extensionLoader.getExtension("red");
-        redCar.getColor();
-//        Car benz = extensionLoader.getExtension("benz");
-//
-//
-//        Map<String, String> map = new HashMap<>();
-//        map.put("car", "black");
-//        URL url = new URL("","",1, map);
-//
-//        benz.getColorForUrl(url);
+        Map<String, String> map = new HashMap<>();
+        map.put("car", "red");
+        URL url = new URL("","",1, map);
+        Car benz = extensionLoader.getExtension("benz");
+        benz.getColorForUrl(url);
 
-        try {
+        /*try {
             System.in.read();
         } catch (IOException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }

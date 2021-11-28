@@ -28,6 +28,7 @@ public class BenzCar implements Car {
 
     @Override
     public void getColorForUrl(URL url) {
+        System.out.println("benz");
         car.getColorForUrl(url);
     }
 }

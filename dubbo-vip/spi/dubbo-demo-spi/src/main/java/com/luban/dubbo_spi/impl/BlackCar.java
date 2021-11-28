@@ -12,7 +12,7 @@ import org.apache.dubbo.common.URL;
  * 讲师：周瑜老师
  * *************学海无涯苦作舟***************
  */
-@Extension("bbb")
+//@Extension("bbb")
 public class BlackCar implements Car {
 
     public void getColor() {

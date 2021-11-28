@@ -16,17 +16,20 @@ public class Car2Wrapper implements Car{
     private Car car;
 
     public Car2Wrapper(Car car) {
-        System.out.println("122");
         this.car = car;
     }
 
     @Override
     public void getColor() {
+        System.out.println("before2");
         car.getColor();
+        System.out.println("after2");
     }
 
     @Override
     public void getColorForUrl(URL url) {
-
+        System.out.println("before2ForUrl");
+        car.getColorForUrl(url);
+        System.out.println("after2ForUrl");
     }
 }

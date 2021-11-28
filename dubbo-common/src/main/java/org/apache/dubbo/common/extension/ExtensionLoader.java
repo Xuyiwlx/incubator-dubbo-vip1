@@ -348,7 +348,7 @@ public class ExtensionLoader<T> {
             synchronized (holder) {
                 instance = holder.get();
                 if (instance == null) {
-                    instance = createExtension(name);
+                    instance = createExtension(name); //扩展点,实现类
                     holder.set(instance);
                 }
             }
@@ -758,7 +758,7 @@ public class ExtensionLoader<T> {
                     }
                 }
                 for (String n : names) {
-                    // 配了多个名字cachedName也只会缓存一个
+                    // 配了多个名字cachedName也只会缓存第一个
                     if (!cachedNames.containsKey(clazz)) {
                         cachedNames.put(clazz, n);
                     }
